@@ -14,13 +14,16 @@ public class homeWork001 {
         driver = new ChromeDriver();
         driver.get("https://ilcarro.web.app");
         driver.manage().window().maximize();
+    }
 
-        @Test
-        public void OpenTestCar () {
-            System.out.println("TestCar");
-        }
+    @Test
+    public void OpenTestCar() {
+        // Ваш тест
+        System.out.println("TestCar");
+    }
 
-@AfterMethod
+    @AfterMethod
         public void tearDown () {
-driver.quit();
+    driver.quit();
+    }
 }
