@@ -12,7 +12,7 @@ public class homeWork001 {
     @BeforeMethod
     public void setUp() throws Exception {
         driver = new ChromeDriver();
-        driver.get("https://ilcarro.web.app");
+        driver.get("https://demowebshop.tricentis.com/");
         driver.manage().window().maximize();
     }
 
