@@ -45,15 +45,26 @@ public class FindElementTests {
     public void findElementBySimpleLocator() {
         WebElement elementCity = driver.findElement(By.id("city"));
         System.out.println(elementCity.getText());
-
         driver.findElement(By.linkText("Let the car work"));
-
     }
 
     @Test
     public void findElementByCSSSelector() {
         WebElement elementCity = driver.findElement(By.cssSelector("#city"));
         System.out.println(elementCity.getText());
+    }
+
+    @Test
+    public void findElementByXpath() {
+        driver.findElement(By.xpath("//input[@id='city']"));
+        driver.findElement(By.xpath("//div[@class='header']"));
+        driver.findElement(By.xpath("//h2[contains(.,'Yalla')]"));
+        driver.findElement(By.xpath("//h2[text()='Type your data and hit Yalla!']"));
+        driver.findElement(By.xpath("//label[starts-with(@for,'ci')]"));
+        driver.findElement(By.xpath("//a[@class='navigation-link']/.."));
+        driver.findElement(By.xpath("//h1/parent::*"));
+        driver.findElement(By.xpath("//h1/ancestor::*"));
+        driver.findElement(By.xpath("//h1/following-sibling::form"));
     }
 
 }
